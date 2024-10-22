@@ -15,5 +15,20 @@ This project is a simple RESTful API for managing personal financial records, bu
 
 ## Postman Screenshots
 
-### `POST /transactions`
-![POST transaction](images\post_transaction.png)
+1. `POST /transactions: Adds a new transaction (income or expense).`
+![POST transaction](images/post_transaction.png)
+
+2. `GET /transactions: Retrieves all transactions.`
+![GET ALL transaction](images/get_all_transaction.png)
+
+3. `GET /transactions/:id: Retrieves a transaction by ID.`
+![GET ID transaction](images/get_id_transaction.png)
+
+4. `PUT /transactions/:id: Updates a transaction by ID.`
+![PUT transaction](images/put_transaction.png)
+
+5. `DELETE /transactions/:id: Deletes a transaction by ID.`
+![DELETE transaction](images/delete_transaction.png)
+
+6. `GET /summary: Retrieves a summary of transactions, such as total income, total expenses, and balance.`
+![SUMMARY transaction](images/get_summary_transaction.png)
