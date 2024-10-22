@@ -11,3 +11,9 @@ This project is a simple RESTful API for managing personal financial records, bu
 
 3. Run the app:
    node app.js
+
+
+## Postman Screenshots
+
+### `POST /transactions`
+![POST transaction](images\post_transaction.png)
