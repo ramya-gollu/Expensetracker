@@ -1,0 +1,92 @@
+Personal Expense Tracker API Documentation
+
+This file contains the API documentation for the Personal Expense Tracker.
+
+Table of Contents
+1. POST /transactions
+2. GET /transactions
+3. GET /transactions/:id
+4. PUT /transactions/:id
+5. DELETE /transactions/:id
+6. GET /summary
+
+1. POST /transactions
+   Description: Adds a new transaction (income or expense).
+   Request:
+       Body (JSON):
+       {
+         "type": "income",
+         "category": "Salary",
+         "amount": 5000,
+         "date": "2024-10-22",
+         "description": "Monthly salary"
+       }
+   Response (201 Created):
+       {
+         "id": 1
+       }
+   Error (400 Bad Request):
+       {
+         "error": "Missing required fields"
+       }
+
+2. GET /transactions
+   Description: Retrieves all transactions.
+   Response (200 OK):
+   [
+     {
+       "id": 1,
+       "type": "income",
+       "category": "Salary",
+       "amount": 5000,
+       "date": "2024-10-22",
+       "description": "Monthly salary"
+     }
+   ]
+
+3. GET /transactions/:id
+   Description: Retrieves a transaction by ID.
+   Response (200 OK):
+   {
+     "id": 1,
+     "type": "income",
+     "category": "Salary",
+     "amount": 5000,
+     "date": "2024-10-22",
+     "description": "Monthly salary"
+   }
+   Error (404 Not Found):
+   {
+     "error": "Transaction not found"
+   }
+
+4. PUT /transactions/:id
+   Description: Updates a transaction by ID.
+   Request Body (JSON):
+   {
+     "type": "expense",
+     "category": "Groceries",
+     "amount": 100,
+     "date": "2024-10-22",
+     "description": "Weekly groceries"
+   }
+   Response (200 OK):
+   {
+     "message": "Transaction updated"
+   }
+
+5. DELETE /transactions/:id
+   Description: Deletes a transaction by ID.
+   Response (200 OK):
+   {
+     "message": "Transaction deleted"
+   }
+
+6. GET /summary
+   Description: Retrieves a summary of all transactions (total income, total expenses, and balance).
+   Response (200 OK):
+   {
+     "totalIncome": 5000,
+     "totalExpense": 100,
+     "balance": 4900
+   }
