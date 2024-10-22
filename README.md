@@ -6,11 +6,16 @@ This project is a simple RESTful API for managing personal financial records, bu
    a) npm init -y (inside the directory)
 
 2. Create the db files:
-   a) mkdir db
+   a) ```mkdir db```
    b) touch db/database.db
 
 3. Run the app:
-   node app.js
+   ```node app.js```
+
+
+## Documentation
+
+For detailed API documentation, see the [API Documentation](.api_docs.txt).
 
 
 ## Postman Screenshots
