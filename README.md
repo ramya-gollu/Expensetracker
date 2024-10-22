@@ -15,7 +15,7 @@ This project is a simple RESTful API for managing personal financial records, bu
 
 ## Documentation
 
-For detailed API documentation, see the [API Documentation](.api_docs.txt).
+For detailed API documentation, see the [API Documentation](./api_docs.txt).
 
 
 ## Postman Screenshots
